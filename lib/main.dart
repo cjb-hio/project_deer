@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_deer/core/go_router.dart';
 import 'package:project_deer/ui/SplashPage.dart';
 
 void main() {
@@ -11,10 +12,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: mainRouter,
       title: 'Deer',
-      theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      home: const SplashPage(),
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
+        cardColor: Colors.white,
+        canvasColor: Colors.white,
+      ),
     );
   }
 }
