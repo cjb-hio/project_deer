@@ -1,9 +1,11 @@
 class LocalImageUtil {
   static String getAssetsPath(
     String name, {
+    String? prefix,
     ImageFormat format = ImageFormat.png,
   }) {
-    return "assets/images/$name.${format.name}";
+    String p = prefix ?? "";
+    return "assets/images/$p/$name.${format.name}";
   }
 }
 

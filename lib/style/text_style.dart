@@ -6,3 +6,10 @@ TextStyle titleTextLarge = TextStyle(
   fontSize: 24,
   fontWeight: FontWeight.bold,
 );
+
+
+
+TextStyle hintTextMediumStyle = TextStyle(
+  color: Colors.grey,
+  fontSize: 12,
+);
