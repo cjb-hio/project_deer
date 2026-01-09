@@ -37,6 +37,7 @@ dependencies:
   logger: ^2.0.0  # 最新稳定版
   rxdart: ^0.28.0
   go_router: ^6.5.0  # 最新稳定版
+  carousel_slider: ^5.0.0 #轮播图
 
 dev_dependencies:
   flutter_test:

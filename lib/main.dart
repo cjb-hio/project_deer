@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       routerConfig: mainRouter,
       title: 'Deer',
       theme: ThemeData(
+        primaryColor: Colors.blue,
         scaffoldBackgroundColor: Colors.white,
         cardColor: Colors.white,
         canvasColor: Colors.white,
