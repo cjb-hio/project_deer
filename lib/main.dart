@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:get/get.dart';
 import 'package:project_deer/core/go_router.dart';
-import 'package:project_deer/ui/SplashPage.dart';
+
+import 'core/AppBindings.dart';
 
 void main() {
-  runApp(ProviderScope(child: const MyApp()));
+  runApp(GetMaterialApp(home: const MyApp(), initialBinding: AppBinding()));
 }
 
 class MyApp extends StatelessWidget {

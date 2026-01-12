@@ -31,6 +31,7 @@ class _AccountTextState extends State<AccountText> {
       maxLength: 11,
       controller: widget.controller,
       decoration: InputDecoration(
+        counterText: "",
         hintText: "请输入账号",
         suffix: _showDel
             ? GestureDetector(
@@ -88,6 +89,7 @@ class _PasswordTextState extends State<PasswordText> {
       controller: widget.controller,
       obscureText: _obscureText,
       decoration: InputDecoration(
+        counterText: "",
         hintText: "请输入密码",
         suffix: Row(
           mainAxisSize: MainAxisSize.min,
