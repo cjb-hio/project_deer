@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:project_deer/style/button_style.dart';
 import 'package:project_deer/style/text_style.dart';
 import 'package:project_deer/ui/viewmodel/LoginViewModel.dart';
 import 'package:project_deer/ui/widget/input_text.dart';
+import 'package:project_deer/util/log_utils.dart';
 
 class LoginPage extends ConsumerWidget {
   const LoginPage({super.key});
@@ -18,6 +20,10 @@ class LoginPage extends ConsumerWidget {
       viewModel.updateUserName(usernameController.text);
     });
 
+    var passwordController = ref.watch(passwordControllerProvider);
+    passwordController.addListener(() {
+      viewModel.updatePassword(passwordController.text);
+    });
     return Scaffold(
       appBar: AppBar(
         actions: [
@@ -34,8 +40,32 @@ class LoginPage extends ConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text("密码登录", style: titleTextLarge),
+            SizedBox(height: 16),
             AccountText(controller: usernameController),
-            PasswordText(),
+            SizedBox(height: 8),
+            PasswordText(controller: passwordController),
+            SizedBox(height: 24),
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: isLoginEnable
+                    ? () {
+                        logger.i("onPressed");
+                      }
+                    : null,
+                style: sureButtonStyle,
+                child: Text("登录"),
+              ),
+            ),
+            SizedBox(height: 8),
+            Align(
+              alignment: Alignment.centerRight,
+              child: Text("忘记密码", style: hintTextMediumStyle),
+            ),
+            Align(
+              alignment: Alignment.center,
+              child: Text("还没账号？快去注册", style: TextStyle(color: Colors.blue)),
+            ),
           ],
         ),
       ),

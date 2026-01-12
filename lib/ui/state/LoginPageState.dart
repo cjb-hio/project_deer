@@ -12,11 +12,11 @@ class LoginPageState {
   LoginPageState copyWith({
     String? name,
     String? password,
-    bool isLoginEnable = false,
+    bool? isLoginEnable,
   }) {
     return LoginPageState(
       name: name ?? this.name,
-      isLoginEnable: this.isLoginEnable,
+      isLoginEnable: isLoginEnable ?? this.isLoginEnable,
       password: password ?? this.password,
     );
   }

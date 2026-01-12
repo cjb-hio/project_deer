@@ -8,11 +8,18 @@ class LoginViewModel extends StateNotifier<LoginPageState> {
 
   void updateUserName(String text) {
     state = state.copyWith(name: text);
-
+    _checkLoginEnable();
   }
 
   void updatePassword(String text) {
     state = state.copyWith(password: text);
+    _checkLoginEnable();
+  }
+
+  void _checkLoginEnable() {
+    state = state.copyWith(
+      isLoginEnable: state.name.length >= 11 && state.password.length >= 6,
+    );
   }
 }
 
@@ -23,5 +30,9 @@ final loginViewModel = StateNotifierProvider<LoginViewModel, LoginPageState>((
 });
 
 final usernameControllerProvider = Provider.autoDispose<TextEditingController>(
+  (ref) => TextEditingController(),
+);
+
+final passwordControllerProvider = Provider.autoDispose<TextEditingController>(
   (ref) => TextEditingController(),
 );
