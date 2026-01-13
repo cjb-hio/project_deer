@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-TextStyle bodyTextMedium = TextStyle(color: Colors.black, fontSize: 12);
+
 TextStyle titleTextLarge = TextStyle(
   color: Colors.black,
   fontSize: 24,
@@ -14,15 +14,20 @@ TextStyle titleTextLargeNoBold = TextStyle(
 );
 TextStyle titleTextMedium = TextStyle(
   color: Colors.black,
-  fontSize: 16,
+  fontSize: 18,
   fontWeight: FontWeight.bold,
 );
 
-
+TextStyle bodyTextMedium = TextStyle(color: Colors.black, fontSize: 16);
 
 
 
 TextStyle hintTextMediumStyle = TextStyle(
+  color: Colors.grey,
+  fontSize: 16,
+);
+
+TextStyle hintTextSmallStyle = TextStyle(
   color: Colors.grey,
   fontSize: 12,
 );

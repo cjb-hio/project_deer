@@ -38,6 +38,7 @@ dependencies:
   rxdart: ^0.28.0
   carousel_slider: ^5.0.0 #轮播图
   get: ^4.7.3
+  intl: ^0.18.0 #时间
 
 dev_dependencies:
   flutter_test:
