@@ -36,7 +36,6 @@ dependencies:
   cupertino_icons: ^1.0.8
   logger: ^2.0.0  # 最新稳定版
   rxdart: ^0.28.0
-  go_router: ^6.5.0  # 最新稳定版
   carousel_slider: ^5.0.0 #轮播图
   get: ^4.7.3
 
@@ -64,3 +63,4 @@ flutter:
   assets:
     - assets/images/
     - assets/images/login/
+    - assets/images/store/

@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+import 'package:get/get.dart';
 import 'package:logger/logger.dart';
 import 'package:project_deer/core/go_router.dart';
 import 'package:project_deer/ui/widget/load_image.dart';
@@ -49,6 +49,6 @@ class _SplashPageState extends State<SplashPage> {
   }
 
   void _goSplashPage() {
-    context.replace(ROUTE_GUIDE);
+    Get.replace(ROUTE_GUIDE);
   }
 }

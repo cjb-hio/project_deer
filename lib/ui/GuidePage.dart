@@ -2,7 +2,7 @@
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+import 'package:get/get.dart';
 import 'package:project_deer/core/go_router.dart';
 import 'package:project_deer/ui/widget/load_image.dart';
 import 'package:project_deer/util/image_util.dart';
@@ -15,7 +15,7 @@ class GuidePage extends StatelessWidget {
     return Material(
       child: CarouselSlider(
         items: _getBannerList(() {
-          context.go(ROUTE_LOGIN);
+          Get.toNamed(ROUTE_LOGIN);
         }),
         options: CarouselOptions(
           height: MediaQuery.of(context).size.height, // 关键：使用屏幕高度

@@ -4,8 +4,8 @@ class LocalImageUtil {
     String? prefix,
     ImageFormat format = ImageFormat.png,
   }) {
-    String p = prefix ?? "";
-    return "assets/images/$p/$name.${format.name}";
+    String p = prefix == null ? "" : "/$prefix";
+    return "assets/images$p/$name.${format.name}";
   }
 }
 

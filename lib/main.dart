@@ -5,18 +5,10 @@ import 'package:project_deer/core/go_router.dart';
 import 'core/AppBindings.dart';
 
 void main() {
-  runApp(GetMaterialApp(home: const MyApp(), initialBinding: AppBinding()));
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp.router(
-      routerConfig: mainRouter,
-      title: 'Deer',
+  runApp(
+    GetMaterialApp(
+      initialRoute: ROUTE_SHOP_INFO,
+      getPages: pageList,
       theme: ThemeData(
         primaryColor: Colors.blue,
         scaffoldBackgroundColor: Colors.white,
@@ -39,6 +31,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-    );
-  }
+      initialBinding: AppBinding(),
+    ),
+  );
 }

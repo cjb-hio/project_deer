@@ -38,7 +38,8 @@ class LoginPage extends GetView<LoginViewModel> {
                 () => ElevatedButton(
                   onPressed: controller.isLoginEnable.value
                       ? () {
-                          logger.i("onPressed");
+                          controller.login();
+
                         }
                       : null,
                   style: sureButtonStyle,
