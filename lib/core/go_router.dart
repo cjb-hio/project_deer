@@ -1,10 +1,11 @@
 import 'package:get/get.dart';
-import 'package:project_deer/ui/GuidePage.dart';
-import 'package:project_deer/ui/LoginPage.dart';
-import 'package:project_deer/ui/MainPage.dart';
-import 'package:project_deer/ui/StoreInfoPage.dart';
-import 'package:project_deer/ui/SplashPage.dart';
-import 'package:project_deer/ui/StoreInfoResultPage.dart';
+import 'package:project_deer/ui/page/GuidePage.dart';
+import 'package:project_deer/ui/page/LoginPage.dart';
+import 'package:project_deer/ui/page/MainPage.dart';
+import 'package:project_deer/ui/page/StoreInfoPage.dart';
+
+import '../ui/page/SplashPage.dart';
+import '../ui/page/StoreInfoResultPage.dart';
 
 final List<GetPage> pageList = [
   GetPage(name: ROUTE_SPLASH, page: () => SplashPage()),

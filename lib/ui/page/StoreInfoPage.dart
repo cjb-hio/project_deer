@@ -5,7 +5,7 @@ import 'package:project_deer/ui/viewmodel/ShopInfoViewModel.dart';
 import 'package:project_deer/ui/widget/edit_item.dart';
 import 'package:project_deer/ui/widget/load_image.dart';
 
-import '../style/button_style.dart';
+import '../../style/button_style.dart';
 
 class StoreInfoPage extends GetView<StoreInfoViewModel> {
   const StoreInfoPage({super.key});

@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:project_deer/core/go_router.dart';
+import 'package:project_deer/style/button_style.dart';
 import 'package:project_deer/style/text_style.dart';
 import 'package:project_deer/ui/widget/load_image.dart';
 import 'package:project_deer/util/time_util.dart';
-
-import '../style/button_style.dart';
 
 class StoreInfoResultPage extends GetView {
   @override
