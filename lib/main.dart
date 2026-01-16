@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
 import 'package:project_deer/core/go_router.dart';
 
 import 'core/AppBindings.dart';
 
 void main() {
+  debugPaintSizeEnabled = false; // 添加这行调试
   runApp(
     GetMaterialApp(
-      initialRoute: ROUTE_SHOP_INFO,
+      initialRoute: ROUTE_Main,
       getPages: pageList,
       theme: ThemeData(
         primaryColor: Colors.blue,

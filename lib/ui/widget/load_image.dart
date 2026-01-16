@@ -8,6 +8,7 @@ class LoadAssetsImage extends StatelessWidget {
   final String? prefix;
   final ImageFormat format;
   final BoxFit fit;
+  final Color? color;
 
   const LoadAssetsImage(
     this.name, {
@@ -17,6 +18,7 @@ class LoadAssetsImage extends StatelessWidget {
     this.prefix,
     this.format = ImageFormat.png,
     this.fit = BoxFit.scaleDown,
+    this.color,
   });
 
   @override
@@ -26,6 +28,7 @@ class LoadAssetsImage extends StatelessWidget {
       fit: fit,
       width: width?.toDouble(),
       height: height?.toDouble(),
+      color: color,
     );
   }
 }
