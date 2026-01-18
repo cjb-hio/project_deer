@@ -1,9 +1,10 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:project_deer/core/SliverAppBarDelegate.dart';
 import 'package:project_deer/style/text_style.dart';
 import 'package:project_deer/ui/viewmodel/MainBookViewModel.dart';
+import 'package:project_deer/ui/widget/flexible_space_bar.dart';
 import 'package:project_deer/ui/widget/load_image.dart';
 
 class MainBookPage extends GetView<MainBookViewModel> {
@@ -48,17 +49,18 @@ class MainBookPage extends GetView<MainBookViewModel> {
     return [
       SliverAppBar(
         pinned: true,
+        stretch: true,
         centerTitle: true,
         expandedHeight: 100,
-        title: Text("订单", style: titleTextMedium.copyWith(color: Colors.white)),
-        flexibleSpace: SizedBox(
-          width: double.infinity,
-          height: double.infinity,
-          child: LoadAssetsImage(
-            "order_bg",
-            prefix: "order",
-            fit: BoxFit.cover,
+        flexibleSpace: MyFlexibleSpaceBar(
+          title: Text(
+            "订单",
+            style: titleTextMedium.copyWith(color: Colors.white),
           ),
+          titlePadding: const EdgeInsetsDirectional.only(start: 16.0, bottom: 14.0),
+          background: LoadAssetsImage("order_bg", prefix: "order"),
+          collapseMode: CollapseMode.pin,
+          centerTitle: true,
         ),
         actions: [
           IconButton(
